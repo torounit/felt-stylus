@@ -1,0 +1,31 @@
+{
+  "name": "felt-stylus",
+  "version": "0.0.1",
+  "description": "stylus plugin for Felt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Toro_Unit",
+  "license": "MIT",
+  "dependencies": {
+    "co": "^4.6.0",
+    "fs-promise": "^1.0.0",
+    "stylus": "^0.54.5"
+  },
+  "devDependencies": {
+    "felt": "^0.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/torounit/felt-stylus.git"
+  },
+  "keywords": [
+    "felt",
+    "stylus"
+  ],
+  "bugs": {
+    "url": "https://github.com/torounit/felt-stylus/issues"
+  },
+  "homepage": "https://github.com/torounit/felt-stylus#readme"
+}
