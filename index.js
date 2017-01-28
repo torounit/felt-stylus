@@ -9,7 +9,7 @@ const defaultConfig = 'stylus.config.js';
 
 module.exports = function(config) {
   const root = process.cwd();
-  let baseConfig;
+  var baseConfig;
   const configFile = (typeof config === 'string')
     ? config
     : defaultConfig;
