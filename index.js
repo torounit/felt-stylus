@@ -39,9 +39,10 @@ module.exports = function(config) {
         } else {
           const write = fsp.writeFile(to, result)
             .catch(reject);
-          if (typeof options.post === 'function') {
+          if (typeof config.post === 'function') {
+
             write.then(() => {
-              resolve(options.post(to, to));
+              resolve(config.post(to, to));
             });
           } else {
             resolve(write);
