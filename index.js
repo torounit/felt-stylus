@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 const co = require('co');
 const fsp = require('fs-promise');
 const path = require('path');
@@ -7,7 +7,7 @@ const stylus = require('stylus');
 /** default config file name */
 const defaultConfig = 'stylus.config.js';
 
-module.exports = function (config) {
+module.exports = function(config) {
   const root = process.cwd();
   let baseConfig;
   const configFile = (typeof config === 'string')
@@ -23,11 +23,13 @@ module.exports = function (config) {
   if (baseConfig) {
     config = Object.assign(baseConfig, config);
   }
+
   return co.wrap(function*(from, to) {
-    const options = Object.assign({}, config, {
-      file: from,
+    const options = Object.assign({}, config.options, {
+      filename: from,
       paths: [path.dirname(from)]
     });
+
     to = to.replace(/\.styl$/, '.css');
     let styl = yield fsp.readFile(from, 'utf8');
     return yield new Promise((resolve, reject) => {
